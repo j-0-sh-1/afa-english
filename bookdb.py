@@ -4,11 +4,11 @@ from datetime import datetime, timedelta
 from pymongo import MongoClient
 
 # MongoDB connection setup
-#MONGO_URI = ("mongodb+srv://joshuailangovansamuel:HHXm1xKAsKxZtQ6I@"
-#             "cluster0.pbvcd.mongodb.net/fuel_records?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_URI = ("mongodb+srv://joshuailangovansamuel:HHXm1xKAsKxZtQ6I@"
+             "cluster0.pbvcd.mongodb.net/fuel_records?retryWrites=true&w=majority&appName=Cluster0")
 
-import os
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://joshuailangovansamuel:<default_password>@cluster0.pbvcd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+#import os
+#MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://joshuailangovansamuel:<default_password>@cluster0.pbvcd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 client = MongoClient(MONGO_URI)
 db = client["afa-english"]  # Database name
